@@ -67,7 +67,7 @@ When you build the project with Gradle, two Jar files are created:
 The latter can be directly executed from the command line,
 using the class [CommandLineRunner](src/main/java/jb/CommandLineRunner.java) as entry point, e.g. like so:
 
-    java -jar build/lib/convert-junit4-to-junit5-fat.jar
+    java -jar build/libs/convert-junit4-to-junit5-fat.jar
 
 This will show the available options:
 
@@ -89,7 +89,7 @@ This tool is build around the idea to have a list of conversions that are execut
 Have a look at the [available conversions](src/main/java/jb/convert/ast).
 Conversion you do not need can be excluded by commenting them out in [`JunitConversionLogic`](src/main/java/jb/convert/JunitConversionLogic.java).
 
-In case your project has custom JUnit 4 code e.g. Rules, you can implement your own [`Conversion`](src/main/java/jb/convert /ast/Conversion.java) and add it to the [JunitConversionLogic](src/main/java/jb/convert/JunitConversionLogic.java). 
+In case your project has custom JUnit 4 code e.g. Rules, you can implement your own [`Conversion`](src/main/java/jb/convert/ast/Conversion.java) and add it to the [JunitConversionLogic](src/main/java/jb/convert/JunitConversionLogic.java). 
 You will need to have a look at how to work with the AST produced by [Java Parser](https://github.com/javaparser/javaparser).
 Looking at the existing conversions for inspiration may help too.
 If you write a new conversion that might be helpful to others, feel free to open a [pull request](https://github.com/junit-pioneer/convert-junit4-to-junit5/pulls).
